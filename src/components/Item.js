@@ -12,11 +12,11 @@ import { useEffect, useState } from "react";
 
 export default function Item({ nombre, descripcion, stock, fcIncrementar }) {
 
-  const [contador, setContador] = useState(stock)
+  const [cantStock, setStock] = useState(stock);
 
-  const restar = () => {
-    setContador(contador-1)
-    fcIncrementar()
+  const handleRemove = () => {
+    setStock(cantStock-1);
+    fcIncrementar();
   }
 
   return (
@@ -24,9 +24,8 @@ export default function Item({ nombre, descripcion, stock, fcIncrementar }) {
       <div className='producto'>
         <h3>{nombre}</h3>
         <p>{descripcion}</p>
-        <h5>En stock <span>{contador > 0 ? contador : "agotado"}</span>
-        </h5>
-        { contador > 0 ? <button onClick={restar} >COMPRAR</button> : <button disabled >SIN STOCK</button>}
+        <h5>En stock <span>{cantStock > 0 ? cantStock : "agotado"}</span></h5>
+        { cantStock > 0 ? <button onClick={handleRemove} >COMPRAR</button> : <button disabled >SIN STOCK</button>}
       </div>
     </>
   )

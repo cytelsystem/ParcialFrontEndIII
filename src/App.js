@@ -13,16 +13,24 @@ import Listado from './components/Listado';
 
 function App() {
 
-  const [contador, setContador] = useState(0)
+  const [contador, setContador] = useState(0);
 
-  const fcIncrementar = () => {
-    setContador(contador+1)
+  const handleAdd = () => {
+    setContador(contador+1);
   }
+
+  useEffect(() => {
+    console.log("Se monto el componente");
+  }, [])
+
+  useEffect(() => {
+    console.log("Se actualizo el componente");
+  }, [contador])
 
   return (
     <div className="App">
       <Cabecera cantidadComprados={contador}/>
-      <Listado fcIncrementar={fcIncrementar}/>
+      <Listado fcIncrementar={handleAdd}/>
     </div>
   )
 }

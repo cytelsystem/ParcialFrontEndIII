@@ -1,6 +1,6 @@
 import React from 'react'
 import Item from './Item';
-import data from './data.json';
+import data from '../data/data.json';
 
 // Debemos importar el listado de objetos del archivo JSON para usarlos como array a la hora de crear cada Item.
 // El componente Listado es el padre de:

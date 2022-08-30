@@ -1,3 +1,4 @@
+
 // El componente Item no tiene componentes hijos.
 // ESTADO: Item debe tener un número para almacenar la cantidad de stock, la misma se la defina el padre a la hora de crearlo.
 // MÉTODOS: Item debe manejar el click de su boton para restar la cantidad en stock de sí mismo y a su vez poder aumentar el estado de su "abuelo" App.
@@ -8,11 +9,24 @@
 //    h5 > span    (este span debe mostrar la cantidad si es mayor a 0 "agotado" si llega a 0)
 //    button       (este boton debe permitir comprar, pero si la cantidad es menor a 0 debe estar deshabilitado y decir "Sin stock")
 
-export default function Item() {
+export default function Item({ data, fcIncrementar }) {
+
+ 
+
+
+  // const dataStop = data.map(data => {return data})
 
   return (
-    <div className='producto'>
-      {/* maquetar Item aquí */}
-    </div>
+    <>
+    {data.map(data => (
+      <div className='producto' key={data.id}>
+        <h3>{data.producto.nombre}</h3>
+        <p>{data.producto.descripcion}</p>
+        <h5>En stock <span>{data.stock}</span></h5>
+        {/* { data.stock > 0 ? <button >COMPRAR</button> : <button disabled >SIN STOCK</button>} */}
+        <button onClick={fcIncrementar}>item</button>
+      </div>
+      ))}
+    </>
   )
 }

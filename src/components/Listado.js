@@ -12,7 +12,9 @@ import data from './data.json';
 export default function Listado({fcIncrementar}) {
   return (
     <div className='container'>
-      <Item data={data} fcIncrementar={fcIncrementar} />
+      {data.map(data => (
+        <Item key={data.id} nombre={data.producto.nombre} descripcion={data.producto.descripcion} stock={data.stock} id={data.id} fcIncrementar={fcIncrementar} />
+      ))}
     </div>
   )
 }

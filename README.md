@@ -1,9 +1,11 @@
-# Guía de consignas
 
-En cada uno de los componentes está detallado su funcionamiento.
+# Frontend III
 
-# Demo del proyecto
+## Parcial Primera Entrega
 
-Aquí pueden ver una demo del funcionamiento de la aplicación.
+Aplicación de adicionar productos a un carrito de compras sumando a una cantidad total y restando de cada producto hasta agotar stock de cada producto el cual se desactivara el botón al no tener stock y mostrara agotado.
 
-![demoReactFE3.gif](https://raw.githubusercontent.com/Frontend-III/entregable-frontend-3-junio22/main/demoReactFE3.gif)
+
+## Instalacion y ejecución
+
+

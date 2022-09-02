@@ -1,6 +1,8 @@
 import React from 'react'
 import Item from './Item';
 import data from '../data/data.json';
+import styles from './styles/listado.module.scss';
+
 
 // Debemos importar el listado de objetos del archivo JSON para usarlos como array a la hora de crear cada Item.
 // El componente Listado es el padre de:
@@ -11,7 +13,7 @@ import data from '../data/data.json';
 
 export default function Listado({fcIncrementar}) {
   return (
-    <div className='container'>
+    <div className={`container ${styles.container}`}>
       {data.map(data => (
         <Item key={data.id} nombre={data.producto.nombre} descripcion={data.producto.descripcion} stock={data.stock} id={data.id} fcIncrementar={fcIncrementar} />
       ))}

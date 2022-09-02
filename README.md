@@ -9,6 +9,4 @@ Aplicación de adicionar productos a un carrito de compras sumando a una cantida
 
 ## Instalacion y ejecución
 
-
-https://github.com/cytelsystem/ParcialFrontEndIII/blob/parcialReact/GiffrontendPrimerParcial.gif
 ![FrontEndIII Parcial-high](https://github.com/cytelsystem/ParcialFrontEndIII/blob/parcialReact/GiffrontendPrimerParcial.gif)
